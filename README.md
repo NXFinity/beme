@@ -7,9 +7,9 @@ This is the monorepo for the Beamify project. It contains all the code for the p
 |--|-- api
 |--|-- apps
 |--|--|-- discord
+|--|--|-- desktop
 |--|-- frontends
 |--|--|-- portal
-|--|--|-- desktop
 |--|-- functions
 |--|--|-- swagger.function
 ```

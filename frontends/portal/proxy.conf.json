@@ -1,9 +1,21 @@
 {
   "/api": {
-    "target": "http://localhost:3000",
+    "target": "http://localhost:3021",
     "secure": false
   },
   "/discord-api": {
+    "target": "http://localhost:3000",
+    "secure": false
+  },
+  "/frontends-desktop-api": {
+    "target": "http://localhost:3000",
+    "secure": false
+  },
+  "/desktop-api": {
+    "target": "http://localhost:3000",
+    "secure": false
+  },
+  "/frontends-desktop-desktop-api": {
     "target": "http://localhost:3000",
     "secure": false
   }

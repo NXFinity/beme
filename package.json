@@ -2,7 +2,9 @@
   "name": "@beme/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "postinstall": "electron-builder install-app-deps && electron-builder install-app-deps && electron-builder install-app-deps && electron-builder install-app-deps"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~17.3.0",
@@ -121,6 +123,7 @@
     "@typescript-eslint/eslint-plugin": "^7.3.0",
     "@typescript-eslint/parser": "^7.3.0",
     "cypress": "^13.6.6",
+    "electron": "^28.2.3",
     "eslint": "~8.57.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-cypress": "^2.13.4",
