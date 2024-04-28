@@ -1,0 +1,58 @@
+<div class="menu-item dropdown dropdown-mobile-full" *ngIf="user">
+  <button class="btn" routerLink="download" matTooltip="Download our app">
+    <i class="bi bi-arrow-down-up"></i>
+  </button>
+  <div class="d-flex gap-2">
+    <img
+      src="assets/images/lvlup/nxf_nugget.png"
+      width="16"
+      height="16"
+      alt="nuggets"
+    />
+    <a>0</a>
+    <button class="theme-toggle-button" (click)="toggleThemeMode()">
+      <span *ngIf="isDarkMode()"><i class="bi bi-moon-stars"></i></span>
+      <span *ngIf="!isDarkMode()"><i class="bi bi-emoji-sunglasses"></i></span>
+    </button>
+  </div>
+  <a
+    href="javascript:;"
+    data-bs-toggle="dropdown"
+    data-bs-display="static"
+    class="menu-link"
+  >
+    <div class="menu-img online">
+      <img src="{{ user.profile.avatar }}" alt="Profile" />
+    </div>
+    <div class="menu-text d-sm-block d-none">{{ user.username }}</div>
+  </a>
+  <div class="dropdown-menu dropdown-menu-end me-lg-3 fs-11px mt-1">
+    <a
+      class="dropdown-item d-flex align-items-center"
+      routerLink="/{{ user.username }}"
+      >CHANNEL
+      <i class="bi bi-person-circle ms-auto text-theme fs-16px my-n1"></i
+    ></a>
+    <a
+      class="dropdown-item d-flex align-items-center"
+      routerLink="/{{ user.username }}/profile"
+      >PROFILE
+      <i class="bi bi-person-circle ms-auto text-theme fs-16px my-n1"></i
+    ></a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item d-flex align-items-center" routerLink="/{{ user.username }}/loyalty">LOYALTY<i class="bi bi-person-circle ms-auto text-theme fs-16px my-n1"></i></a>
+    <div class="dropdown-divider"></div>
+    <a
+      class="dropdown-item d-flex align-items-center"
+      routerLink="/{{ user.username }}/settings"
+      >SETTINGS
+      <i class="bi bi-person-circle ms-auto text-theme fs-16px my-n1"></i
+    ></a>
+    <div class="dropdown-divider"></div>
+    <a
+      class="dropdown-item d-flex align-items-center"
+      (click)="authService.logout()"
+      >LOGOUT <i class="bi bi-toggle-off ms-auto text-theme fs-16px my-n1"></i
+    ></a>
+  </div>
+</div>
