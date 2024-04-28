@@ -1,5 +1,6 @@
-import { ChangeDetectorRef, Component, EventEmitter } from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, EventEmitter, OnInit } from '@angular/core';
 import { SettingsService } from "../theme/services/settings.service";
+import { AuthService } from '../core/security/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -34,7 +35,7 @@ import { SettingsService } from "../theme/services/settings.service";
     </div>
   `,
 })
-export class AppComponent {
+export class AppComponent implements OnInit, AfterViewInit {
   appEvent = new EventEmitter<string>();
   appLoaded: boolean = false;
   isAuthenticated$: boolean;
