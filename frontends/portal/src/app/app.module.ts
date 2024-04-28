@@ -6,12 +6,17 @@ import {
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { appRoutes } from './app.routes';
-import { NxWelcomeComponent } from './nx-welcome.component';
+import {TitleService} from "../theme/services/title.service";
 
 @NgModule({
-  declarations: [AppComponent, NxWelcomeComponent],
+  declarations: [AppComponent],
   imports: [BrowserModule, RouterModule.forRoot(appRoutes)],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+  constructor(private titleService: TitleService) {
+    this.titleService.setDynamicTitle();
+    this.titleService.setTitle('newTitle');
+  }
+}
