@@ -4,7 +4,8 @@
 dist
 tmp
 /out-tsc
-
+/api/.env
+/apps/discord/.env
 # dependencies
 node_modules
 
@@ -39,3 +40,4 @@ testem.log
 Thumbs.db
 
 .nx/cache
+.angular
