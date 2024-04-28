@@ -24,3 +24,18 @@ Frontends are the user interfaces for the portal, which grants access to the app
 ### Api:
 #### Swagger endpoint: http://localhost:3021/v1
 ![img.png](img.png)
+
+### Apps:
+#### Desktop:
+build:
+```shell
+nx build desktop  
+```
+serve:
+```shell
+nx serve desktop  
+```
+make
+```shell
+nx run desktop:make --options
+```
